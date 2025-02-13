@@ -14,10 +14,10 @@ import webbrowser
 
 
 s=0
-wake_word='friday'
+wake_word='friday' #you can set your own activation word
 web_cam=cv2.VideoCapture(1)
-genai.configure(api_key='AIzaSyAx0HoMPavz3WT_H4YhbZcMSFAkg0LtJ24') #gemini 1.5 flash
-groq_client=Groq(api_key="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")
+genai.configure(api_key='YOUR-GEMINI-API-KEY') #gemini 1.5 flash
+groq_client=Groq(api_key="YOUR-GROQ-API-KEY")
 model = 'whisper-large-v3'
 sys_msg = (
     'You are a multi-modal AI voice assistant. Your user may or may not have attached a photo for context '
