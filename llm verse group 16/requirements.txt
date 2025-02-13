@@ -1,0 +1,10 @@
+asyncio
+groq
+google-generativeai
+pyperclip
+opencv-python
+pillow
+SpeechRecognition
+edge-tts
+webbrowser
+pygame
