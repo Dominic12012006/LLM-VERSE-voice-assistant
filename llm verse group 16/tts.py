@@ -6,7 +6,7 @@ async def speak(text,s):
     rate = "+110%"  # Increase speed (you can adjust this)
 
     tts = edge_tts.Communicate(text, voice, rate=rate)
-    output_dir = r"C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse\outputs"
+    output_dir = r"C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse group 16\outputs"
     file_path = os.path.join(output_dir, f"output{s}.mp3")
     await tts.save(file_path)
 
