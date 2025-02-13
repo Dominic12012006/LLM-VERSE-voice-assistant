@@ -5,7 +5,7 @@ import os
 pygame.mixer.init()
 
 def play(p):
-    output_dir = r"C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse\outputs"
+    output_dir = r"C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse group 16\outputs"
     file_path = os.path.join(output_dir, f"output{p}.mp3")
     pygame.mixer.music.load(file_path)
 
