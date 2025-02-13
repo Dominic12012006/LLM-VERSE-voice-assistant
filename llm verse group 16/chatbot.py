@@ -14,7 +14,7 @@ import webbrowser
 
 
 s=0
-wake_word='friday' #you can set your own activation word
+wake_word='friday'
 web_cam=cv2.VideoCapture(1)
 genai.configure(api_key='YOUR-GEMINI-API-KEY') #gemini 1.5 flash
 groq_client=Groq(api_key="YOUR-GROQ-API-KEY")
@@ -94,7 +94,7 @@ def function_call(prompt):
     return response.content
 
 def take_screenshot():
-    path=r'C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse\screenshots\s1.jpg'
+    path=r'C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse group 16\screenshots\s1.jpg'
     screenshot=ImageGrab.grab()
     rgb_screenshot=screenshot.convert('RGB')
     rgb_screenshot.save(path,quality=15)
@@ -103,7 +103,7 @@ def web_cam_capture():
     if not web_cam.isOpened():
         print("Error")
         exit()
-    path=r'C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse\webcam\w1.jpg'
+    path=r'C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse group 16\webcam\w1.jpg'
     ret,frame=web_cam.read()
     cv2.imwrite(path,frame)
 
@@ -166,14 +166,14 @@ def callback(recognizer, audio):
                 take_screenshot()
                 visual_context = vision_prompt(
                     prompt=clean_prompt,
-                    photo_path=r'C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse\screenshots\s1.jpg'
+                    photo_path=r'C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse group 16\screenshots\s1.jpg'
                 )
             elif 'capture webcam' in call:
                 print('Capturing webcam')
                 web_cam_capture()
                 visual_context = vision_prompt(
                     prompt=clean_prompt,
-                    photo_path=r'C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse\webcam\w1.jpg'
+                    photo_path=r'C:\Users\Happy Home\OneDrive\Desktop\hackathon\llm verse group 16\webcam\w1.jpg'
                 )
             elif 'extract clipboard' in call:
                 print('Copying clipboard text')
